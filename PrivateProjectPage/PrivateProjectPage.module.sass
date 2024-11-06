@@ -1,0 +1,91 @@
+
+.netflix-page
+  height: 100%
+  width: 100%
+  background: $konoho_blue_other11_color
+  position: relative
+  overflow: hidden
+
+  .header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 20px
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0))
+    +z-index(header)
+
+    .logo
+      font-size: 2em
+      font-weight: bold
+      color: $konoho_red_other_color
+
+    .nav
+      display: flex
+      gap: 20px
+
+      a
+        color: $donuts_white_color
+        text-decoration: none
+        font-weight: 700
+        transition: color 0.3s
+
+        &:hover
+          color: $konoho_red_other_color
+
+  .hero
+    height: 291px
+    width: 100%
+    background: linear-gradient(to right, $donuts_white_color 50%, $konoho_blue_other11_color 50%)
+    position: relative
+    overflow: hidden
+    @media screen and (min-width: $bkp-tab)
+      height: 300px
+    @media screen and (min-width: $min-wd)
+      height: 350px
+
+    .content
+      position: absolute
+      right: -8px
+      left: 0
+      margin: auto
+      height: fit-content
+      text-align: center
+      max-width: 600px
+
+      h1
+        font-size: 3em
+        margin-bottom: 20px
+
+      p
+        font-size: 1.2em
+        margin-bottom: 30px
+
+      .cta
+        padding: 15px 30px
+        background-color: $konoho_red_other_color
+        color: $donuts_white_color
+        border: none
+        font-size: 1.1em
+        font-weight: bold
+        cursor: pointer
+        transition: background-color 0.3s
+
+        &:hover
+          background-color: $konoho_red_hover_color
+
+  .footer
+    padding: 20px
+    text-align: center
+    background-color: $konoho_black_other_color
+    position: fixed
+    bottom: 0
+    width: 100%
+    +z-index(footer_banner)
+    transition: transform 0.3s ease-in-out
+
+    &.hide
+      transform: translateY(100%)
+
+    p
+      font-size: 0.9em
+      color: $donuts_white_color
