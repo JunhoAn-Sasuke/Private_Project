@@ -1,0 +1,19 @@
+@import "@/modules/css/variables";
+@import "@/modules/css/design_mixin";
+
+.footer
+  padding: 20px
+  text-align: center
+  background-color: $konoho_black_other_color
+  position: fixed
+  bottom: 0
+  width: 100%
+  +z-index(footer_banner)
+  transition: transform 0.3s ease-in-out
+
+  &.hide
+    transform: translateY(100%)
+
+  p
+    font-size: 0.9em
+    color: $donuts_white_color
