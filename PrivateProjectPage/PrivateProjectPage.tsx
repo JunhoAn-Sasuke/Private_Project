@@ -5,7 +5,7 @@ import './PrivatePage.scss';
 
 const PrivatePage: React.FC = () => {
   return (
-    <div className="netflix-page">
+    <div className="private_page">
       <Header />
       <section className="hero">
         <div className="content">
